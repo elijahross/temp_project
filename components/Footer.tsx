@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import logo from '../public/logo.svg'
 
+
 //Minimalistic Footer component
 export const Footer = () => {
     return (

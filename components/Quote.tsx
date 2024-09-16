@@ -25,7 +25,7 @@ export default function Quote() {
         // workaround to avoid flattering due to multiple API calls
         const functionStart = setTimeout(() => {
             req();
-        }, 700);
+        }, 300);
         functionStart
         return () => clearTimeout(functionStart);
     }, []);
