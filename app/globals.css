@@ -15,6 +15,10 @@
 }
 
 body {
+  min-height: 100lvh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
