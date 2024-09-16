@@ -25,9 +25,13 @@ export async function auth() {
             }
         });
 
-        // Get all visitors from the database
+        // Get all data from the database
         const visitors = await prisma.visitor.findMany();
         const views = await prisma.view.findMany();
+
+        // Close conneciton
+        await prisma.$disconnect();
+        
         // Cookie expiration date is set to 30 days
         const expires = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
         cookies().set("visitor", user.id.toString(), { expires, httpOnly: true });
@@ -54,9 +58,13 @@ export async function auth() {
             }
         });
 
-        // Get all visitors from the database
+        // Get all data from the database
         const visitors = await prisma.visitor.findMany();
         const views = await prisma.view.findMany();
+
+        // Close conneciton
+        await prisma.$disconnect();
+
         // Cookie expiration date is set to 30 days
         const expires = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
         cookies().set("visitor", user.id.toString(), { expires, httpOnly: true });
