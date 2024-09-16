@@ -23,7 +23,7 @@ interface View {
 // This component calls server function which returns statistics about the visitors, views and returns
 // The results are displayed in the form of animated counters
 
-export default function Visitor({ short }: { short: boolean }) {
+export default function Visitor() {
     // Set the visitor count and error message into the state
     const [visitorCount, setVisitorCount] = useState(0);
     const [viewCount, setViewCount] = useState(0);
@@ -89,18 +89,18 @@ export default function Visitor({ short }: { short: boolean }) {
 
 
     return (
-        <div className='w-full px-20 items-center my-10'>
+        <div className='w-full sm:px-20 px-0 items-center mb-10 md:mt-10 mt-32'>
             {error ? <p className='text-red-400 text-xs'>{error}</p> :
                 <div className="w-full flex flex-row items-center justify-between">
-                    <div className='mx-20 items-center justify-center flex flex-col font-bold'>
+                    <div className='md:mx-20 mx-8 items-center justify-center flex flex-col font-bold'>
                         <p className='text-4xl text-center mb-2'>{visitorCount}</p>
                         <h2 className='text text-center'>Visitors</h2>
                     </div>
-                    <div className={`${short ? "hidden" : ""} mx-20 items-center justify-center flex flex-col font-bold`}>
+                    <div className={`md:mx-20 mx-8 items-center justify-center flex flex-col font-bold`}>
                         <p className='text-4xl text-center mb-2'>{viewCount}</p>
                         <h2 className='text text-center'>Views</h2>
                     </div>
-                    <div className={`${short ? "hidden" : ""} mx-20 items-center justify-center flex flex-col font-bold`}>
+                    <div className={`md:mx-20 mx-8 items-center justify-center flex flex-col font-bold`}>
                         <p className='text-4xl text-center mb-2'>{returnCount}</p>
                         <h2 className='text text-center'>Returns</h2>
                     </div>

@@ -14,6 +14,14 @@ const config: Config = {
         primary: "rgb(241,241,241)",
         secondary: "rgb(23,23,23)"
       },
+      screens: {
+        xs: "480px",
+        ss: "620px",
+        sm: "768px",
+        md: "1060px",
+        lg: "1200px",
+        xl: "2200px",
+      },
     },
   },
   plugins: [],
