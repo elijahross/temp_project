@@ -1,7 +1,7 @@
 "use client"
 import getQuote from '../actions/getQuote';
 import { useEffect, useState } from 'react';
-import gym from '../public/gym.jpg';
+import gym from '../public/Gym.jpg';
 import Image from 'next/image';
 
 interface QuoteResponse {
